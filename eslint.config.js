@@ -10,6 +10,7 @@ module.exports = [
       'eslint.config.js',
       '.eslintrc.js',
       'jest.setup.js',
+      'playwright.config.js',
       'node_modules/**',
       'dist/**'
     ]
