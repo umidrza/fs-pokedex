@@ -6,15 +6,15 @@ on:
       - main
 
 jobs:
-  simple_deployment_pipeline:    
-    runs-on: ubuntu-latest    
-    steps:      
+  simple_deployment_pipeline:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6        
-        with:          
-          node-version: '24'
-          
-      - name: Install dependencies        
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
         run: npm install
 
       - name: Check style        
@@ -25,3 +25,6 @@ jobs:
       
       - name: Run npm build
         run: npm run build
+
+      - name: Trigger deployment
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
