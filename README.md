@@ -112,7 +112,7 @@ This project includes two GitHub Actions workflows:
 
 File: [`.github/workflows/pipeline.yml`](/c:/Users/umidr/FullStackOpen%20Projects/ci-cd/fs-pokedex/.github/workflows/pipeline.yml)
 
-On pushes to `main`, the workflow:
+On pushes and pulls to `main`, the workflow:
 
 1. Checks out the code
 2. Installs dependencies
